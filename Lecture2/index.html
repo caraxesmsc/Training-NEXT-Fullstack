@@ -3,6 +3,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <Style>
+        p{
+            /*  selector */
+            color: red;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        p,h1{
+            /*  group selector */
+            color: blue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        *{
+            /* universal selector */
+            color: purple;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+        }
+        body{
+            background-color: antiquewhite;
+        }
+    </Style>
 </head>
 <body>
     <h1>Hello</h1>
@@ -12,7 +33,9 @@
     <h5>Hello</h5>
     <h6>Hello</h6>
     <hr>
-    <img src="image.png" width="200">
+    <div style="background-color: black; ">
+        <img src="image.png" width="200">
+    </div>
     <hr>
     <ul>
         <li>hello</li>
