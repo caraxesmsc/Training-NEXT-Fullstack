@@ -24,20 +24,22 @@
     <h1>Hello</h1>
     <p id="para1">Press the button</p>
     <button id="myBtn">Click</button>
-    <br>
-    <br>
-    <br>
-
+  
     <h1 id="dark">Dark Mode Toggle</h1>
     <button id="darkmodeToggle">Enable</button>
     <br>
-    <hr>
-    
+    br
     Zoom:<button id="imagesmall">-</button>
     <button id="imagebig">+</button>
     
     <br>
 <img id="image" src="KahleAcoustics-GCCC-02.jpg" style="width:50px;">
+    <hr>
+    <br>
+    Enter Your Name: <input id="nameinput" type="text">
+    <button id="submitname">Submit</button>
+    <h1 id="replacename">Your Name: </h1>
+    <hr>
     <script>
         document.getElementById("myBtn").onclick=function(){
             document.getElementById("para1").innerHTML="Welcome";
@@ -50,6 +52,12 @@
         }
         document.getElementById("imagesmall").onclick=function(){
             document.getElementById("image").style.cssText="width:50px;";
+        }
+        var name="";
+        document.getElementById("submitname").onclick=function(){
+            
+            name=document.getElementById("nameinput").value;
+            document.getElementById("replacename").innerHTML="Your Name: "+name;
         }
     </script>
 </body>
