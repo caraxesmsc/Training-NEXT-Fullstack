@@ -1,6 +1,7 @@
 body{
     background-color: antiquewhite;
-    
+    background:
+        linear-gradient(-50deg, #823329, antiquewhite);
 }
 h1,h2,h3 {
     color: rgb(127, 72, 0);
