@@ -21,6 +21,6 @@ function auth(bool){
     return msg;
 }
 let Arr2=["A","B","C"];
-for(i=0;i<Arr.length;i++){
+for(i=0;i<Arr2.length;i++){
     console.log(i+": "+Arr2[i]);
 }
