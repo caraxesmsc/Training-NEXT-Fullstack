@@ -24,11 +24,33 @@
     <h1>Hello</h1>
     <p id="para1">Press the button</p>
     <button id="myBtn">Click</button>
+    <br>
+    <br>
+    <br>
+
+    <h1 id="dark">Dark Mode Toggle</h1>
+    <button id="darkmodeToggle">Enable</button>
+    <br>
+    <hr>
+    
+    Zoom:<button id="imagesmall">-</button>
+    <button id="imagebig">+</button>
+    
+    <br>
+<img id="image" src="KahleAcoustics-GCCC-02.jpg" style="width:50px;">
     <script>
         document.getElementById("myBtn").onclick=function(){
             document.getElementById("para1").innerHTML="Welcome";
         }
-        
+        document.getElementById("darkmodeToggle").onclick=function(){
+            document.getElementById("dark").style.cssText="color:white ; background-color: rgb(43, 43, 43);";
+        }
+        document.getElementById("imagebig").onclick=function(){
+            document.getElementById("image").style.cssText="width:250px;";
+        }
+        document.getElementById("imagesmall").onclick=function(){
+            document.getElementById("image").style.cssText="width:50px;";
+        }
     </script>
 </body>
 </html>
