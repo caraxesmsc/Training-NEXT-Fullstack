@@ -20,3 +20,7 @@ function auth(bool){
     let msg = bool ? "Access Granted" : "DENIED";
     return msg;
 }
+let Arr2=["A","B","C"];
+for(i=0;i<Arr.length;i++){
+    console.log(i+": "+Arr2[i]);
+}
