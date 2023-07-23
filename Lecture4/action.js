@@ -1,8 +1,5 @@
-function sayHello(){
+function sayHello(name){
     console.log("Hello");
-    console.log("Welcome ALL!");
-}
-function sayHello2(name){
-    console.log("Hello");
-    console.log("Welcome "+name);
+    let message = (name === undefined) ?  "Welcome All!" : "Welcome "+name;
+    console.log(message);
 }
