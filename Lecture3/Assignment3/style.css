@@ -1,0 +1,10 @@
+body{
+    background-color: antiquewhite;
+    
+}
+h1,h2,h3 {
+    color: rgb(127, 72, 0);
+}
+p,li{
+    color: rgb(49, 24, 0);
+}
