@@ -5,15 +5,17 @@
     <title>Earth</title>
     <link rel="stylesheet" href="style.css">
     <script src="action.js"></script>
+    
+</head>
+<body>
     <style id="DarkLight">
         body{
-                color: aquamarine;
+                color: red;
                 background-color: bisque;
             }
 
     </style>
-</head>
-<body>
+
     <h1>Hello World!</h1>
     <h3>A few facts about the world we live in.</h3>
     <h4 style="color: blue;"> A report by: Mohamed Hossam Abdelalim 21P0254</h4>
@@ -66,13 +68,16 @@
     <form>
         <input type="button" value="Click here">
     </form>
+
+
+    
     <script>
         document.getElementById("DarkEnabButton").onclick=function(){
-            document.getElementById("DarkLight").innerText("body{color:White;Background-color:Black;}");
-}
+            document.getElementById("DarkLight").innerHTML="body{color:White ; background-color:Black;}";
+        }
         document.getElementById("LightEnabButton").onclick=function(){
-            document.getElementById("DarkLight").innerText("body{color:Brown;Background-color:AntiqueWhite;}");
-}
+            document.getElementById("DarkLight").innerHTML="body{color:Brown;background-color:AntiqueWhite;}";
+        }
     </script>
 </body>
 </html>
