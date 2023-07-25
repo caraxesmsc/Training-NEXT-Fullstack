@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5</title>
+</head>
+<body>
+
+    <h1>Calculator</h1>
+    First Number :    <input type="text" id="parameter1">
+    <br><br>
+    Second Number: <input type="text" id="parameter2">
+    <br><br>
+    <button id="addButton">Add</button>
+    <br><hr>
+    <h3>Your Sum is:</h3>
+    <p id="sumhere"></p>
+    <p id="evenoddhere"></p>
+    <script>
+        document.getElementById("addButton").onclick=function(){
+            var data1 = document.getElementById("parameter1").value;
+            var data2 = document.getElementById("parameter2").value;
+            var data3 = data1+data2;
+            var data4 = (data3%2 == 0) ? "even" : "odd";
+            document.getElementById("sumhere").innerHTML=""
+        }
+    </script>
+</body>
+</html>
