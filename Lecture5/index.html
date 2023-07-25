@@ -37,5 +37,18 @@
             document.getElementById("image1").style.cssText="width:50px";
         }
     </script>
+    <hr>
+    <h1>Live Text</h1>
+    <p id="live1">Once you go over this text it will change to blue to indicate that you are hovering over it.</p>
+    <script>
+        document.getElementById("live1").onmouseover=function(){
+            this.style.cssText="color:blue;background-color:antiquewhite;";
+        }
+        document.getElementById("live1").onmouseleave=function(){
+            this.style.cssText="";
+        }
+    </script>
+
+
 </body>
 </html>
