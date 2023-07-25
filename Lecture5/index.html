@@ -20,7 +20,10 @@
         document.getElementById("addButton").onclick=function(){
             var data1 = document.getElementById("parameter1").value;
             var data2 = document.getElementById("parameter2").value;
-            var data3 = data1 + data2;
+            function sum2(n1,n2){
+                return parseInt(n1)+parseInt(n2);
+            }
+            var data3 = sum2(data1,data2);
             var data4 = (data3%2 == 0) ? "even" : "odd";
             document.getElementById("sumhere").innerHTML=data3;
             document.getElementById("evenoddhere").innerHTML=data4;
