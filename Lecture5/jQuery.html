@@ -28,7 +28,21 @@
 <hr>
 <button id="btn2">Fade</button>
 <img src="cena.gif"id="cena" width="400px">
-
+<hr>
+<p id="Lorem1" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aliquid rem expedita nemo, sint ducimus magnam repudiandae eum non officiis blanditiis eos corrupti totam libero incidunt, atque accusamus adipisci harum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, libero odit. Hic beatae esse quidem ad earum tempore ex temporibus cupiditate, optio qui praesentium ea illo adipisci reiciendis non numquam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates ducimus ipsam! Quo debitis ut incidunt vero a tenetur velit vel quis illum commodi consequatur non, cupiditate nostrum quasi fugit.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem facilis voluptatum veniam non aliquam aut repellendus quod cumque explicabo. Omnis nesciunt delectus quae dolorem quibusdam expedita eos libero voluptatum impedit.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum est numquam omnis ex cumque quos amet quo doloribus rem cupiditate voluptatum iste illum, repudiandae adipisci ea vitae nostrum! Dolor, maxime.
+</p>
+<button id="btn3">Slide1</button>
+<p id="Lorem2"style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aliquid rem expedita nemo, sint ducimus magnam repudiandae eum non officiis blanditiis eos corrupti totam libero incidunt, atque accusamus adipisci harum.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, libero odit. Hic beatae esse quidem ad earum tempore ex temporibus cupiditate, optio qui praesentium ea illo adipisci reiciendis non numquam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates ducimus ipsam! Quo debitis ut incidunt vero a tenetur velit vel quis illum commodi consequatur non, cupiditate nostrum quasi fugit.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem facilis voluptatum veniam non aliquam aut repellendus quod cumque explicabo. Omnis nesciunt delectus quae dolorem quibusdam expedita eos libero voluptatum impedit.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum est numquam omnis ex cumque quos amet quo doloribus rem cupiditate voluptatum iste illum, repudiandae adipisci ea vitae nostrum! Dolor, maxime.
+</p>
+<button id="btn4">Slide2</button>
     <script>
         $('#para1').html("now this is Jquery");
         $('#header1').click(function(){
@@ -49,11 +63,17 @@
             }
             $("#result1").html(result);
         })
-        // $("#cena").hover(function(){
-        //     $(this).fadeOut();
-        // })
+        $("#cena").hover(function(){
+            $(this).fadeOut();})
         $("#btn2").click(function(){
-            $("#cena").fadeToggle(200);
+            $("#cena").fadeToggle(200);})
+
+        $("#btn3").click(function(){
+            $("#Lorem1").slideToggle(200);})
+        $("#btn4").click(function(){
+            $("#Lorem2").slideToggle(200);})
+        $({"#Lorem1":"#Lorem2"}).hover(function(){
+            $(this).css("color","blue");
         })
     </script>
     
