@@ -9,10 +9,21 @@
     <h1>This is jQuery</h1>
     <script type="text/javascript">
         if( typeof jQuery=="undefined"){
-            alert("Not");
+           // alert("Not");
         }else{
-            alert("ok");
+            //alert("ok");
         }
     </script>
+
+    <p id="para1">Hello</p>
+    <!-- old way -->
+    <script>
+        document.getElementById("para1").innerHTML="This is JS";
+    </script>
+    <!-- jquery -->
+    <script>
+        $('#para1').html("now this is Jquery");
+    </script>
+    
 </body>
 </html>
