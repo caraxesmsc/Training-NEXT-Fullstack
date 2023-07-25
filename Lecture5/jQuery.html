@@ -25,6 +25,9 @@
     Age: <input type="text" name="Age" id="age">
     <button id="btn1">Submit</button>
     <p id="result1">redult</p>
+<hr>
+<button id="btn2">Fade</button>
+<img src="cena.gif"id="cena" width="400px">
 
     <script>
         $('#para1').html("now this is Jquery");
@@ -45,6 +48,12 @@
                 var result="full";
             }
             $("#result1").html(result);
+        })
+        // $("#cena").hover(function(){
+        //     $(this).fadeOut();
+        // })
+        $("#btn2").click(function(){
+            $("#cena").fadeToggle(200);
         })
     </script>
     
