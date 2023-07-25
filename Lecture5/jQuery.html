@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-    <h1>This is jQuery</h1>
+    <h1 id="header1">This is jQuery</h1>
     <script type="text/javascript">
         if( typeof jQuery=="undefined"){
            // alert("Not");
@@ -14,7 +14,7 @@
             //alert("ok");
         }
     </script>
-
+<img id="image1" src="KahleAcoustics-GCCC-02.jpg" width="50px">
     <p id="para1">Hello</p>
     <!-- old way -->
     <script>
@@ -23,7 +23,16 @@
     <!-- jquery -->
     <script>
         $('#para1').html("now this is Jquery");
+        $('#header1').click(function(){
+            $('#header1').css("color","red")
+        })
+        $('#header1').hover(function(){
+            $('#header1').css("color","blue")
+        })
+        $('#image1').hover(function(){
+            $('#image1').css("width","400px")
+        })
     </script>
-    
+
 </body>
 </html>
