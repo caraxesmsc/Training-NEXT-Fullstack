@@ -21,6 +21,11 @@
         document.getElementById("para1").innerHTML="This is JS";
     </script>
     <!-- jquery -->
+
+    Age: <input type="text" name="Age" id="age">
+    <button id="btn1">Submit</button>
+    <p id="result1">redult</p>
+
     <script>
         $('#para1').html("now this is Jquery");
         $('#header1').click(function(){
@@ -30,9 +35,20 @@
             $('#header1').css("color","blue")
         })
         $('#image1').hover(function(){
-            $('#image1').css("width","400px")
+            $('#image1').css({"width":"400px","height":"60px"})
+        })
+        $("#btn1").click(function(){
+            var data= $("#age").val()
+            if(data<=6){
+                var result="free";
+            }else{
+                var result="full";
+            }
+            $("#result1").html(result);
         })
     </script>
+    
 
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
