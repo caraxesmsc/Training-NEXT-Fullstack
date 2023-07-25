@@ -20,9 +20,21 @@
         document.getElementById("addButton").onclick=function(){
             var data1 = document.getElementById("parameter1").value;
             var data2 = document.getElementById("parameter2").value;
-            var data3 = data1+data2;
+            var data3 = data1 + data2;
             var data4 = (data3%2 == 0) ? "even" : "odd";
-            document.getElementById("sumhere").innerHTML=""
+            document.getElementById("sumhere").innerHTML=data3;
+            document.getElementById("evenoddhere").innerHTML=data4;
+        }
+    </script>
+    <hr>
+    <h1>Image on hover</h1>
+    <img src="KahleAcoustics-GCCC-02.jpg" id="image1" width="50px">
+    <script>
+        document.getElementById("image1").onmouseover=function(){
+            document.getElementById("image1").style.cssText="width:500px";
+        }
+        document.getElementById("image1").onmouseleave=function(){
+            document.getElementById("image1").style.cssText="width:50px";
         }
     </script>
 </body>
