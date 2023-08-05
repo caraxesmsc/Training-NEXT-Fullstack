@@ -37,51 +37,89 @@
             </ul>
         </div>
     </nav>
-    <div class="card bg-transparent border-primary"style=" width:80%;display: block; margin-left: auto; margin-right: auto; margin-top: 20px;">
-        <p class="h1" style="color:antiquewhite;text-align: center  ;">My Projects</p>
+
+
+
+    <div class="card bg-transparent border-primary text-primary"style=" width:80%;display: block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+        <p class="h1" style="text-align: center  ;">My Projects</p>
     
         <!--! Section 4 Products -->
         <div class="container" style="width: 100%; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;">
             <div class="row row-cols-1 row-cols-md-2 g-4" >
+                <!--? New Project -->
                 <div class="col">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover" style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title" ></a> MIPS Assembly Processor Project  </h5>
+                            <p class="card-text">Built all necessary modules and components of the MIPS Processor with Harvard architecture.</p>   
+                        </div>
                     </div>
                 </div>
-                </div>
+                <!--? end of project -->
+                <!--? New Project -->
                 <div class="col">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g2" ><a href="https://github.com/caraxesmsc/LibrarySystemProject" target="_blank" id="linkClickenBTN"><i class="fab fa-github g2" style="color: #b82828;" ></i></a> Library Management System Project  </h5>
+                            <p class="card-text">With GUI in <b>Java</b>, applying <i>Object Oriented Programming</i> concepts.</p>   
+                        </div>
                     </div>
                 </div>
-                </div>
+                <!--? end of project -->
+                <!--? New Project -->
                 <div class="col">
-                <div class="card bg-dark-subtle border-primary-subtle">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body ">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g3" ><a href="https://github.com/caraxesmsc/MovieLibraryViewer" target="_blank" id="linkClickenBTN"><i class="fab fa-github g3" style="color: #b82828;" ></i></a> Movie Library Viewer App Project  </h5>
+                            <p class="card-text">With <b>Python</b> for metadata reading and writing and GUI in <b>Java</b>, applying <i>Object Oriented Programming</i> concepts.</p>  
+                        </div>
                     </div>
                 </div>
-                </div>
+                <!--? end of project -->
+                <!--? New Project -->
                 <div class="col">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g4" ><a href="https://github.com/Mark-S2004/Maestro-food-truck-website" target="_blank" id="linkClickenBTN"><i class="fab fa-github g4" style="color: #b82828;" ></i></a> Food Ordering Website Project  </h5>
+                            <p class="card-text">A Full stack website with login/sign-up, menu, cart and checkout.
+                                With <b>HTML, CSS, JavaScript, and Python Django</b>, applying <i>Software Engineering</i> concepts.
+                                </p>   
+                        </div>
                     </div>
                 </div>
+                <!--? end of project -->
+                <!--? New Project -->
+                <div class="col">
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g3" >Criminal Management System Project </h5>
+                            <p class="card-text">A system where the user can add/remove/edit/view crimes and criminals. With GUI in <b>C++</b></p>   
+                        </div>
+                    </div>
                 </div>
+                <!--? end of project -->
+                
+                
             </div>
         </div>
     </div>  
+
+    <script>
+        {//first 2 Cards hover
+                    
+            $(".objectHover").hover(function(){
+                    $(this).removeClass();
+                    $(this).addClass("card border-primary text-bg-primary mb-3 shadow-lg objectHover");
+                }) 
+                $(".objectHover").mouseleave(function(){
+                    $(this).removeClass();
+                    $(this).addClass("card border-primary bg-transparent text-primary mb-3 objectHover");
+                })
+                $(".g2").click(function(){$(this).css("color","white")})
+                $(".g3").click(function(){$(this).css("color","white")})
+                $(".g4").click(function(){$(this).css("color","white")})
+            }
+    </script>
     <!--! Footer -->
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 100px;">
         <div class="row">
