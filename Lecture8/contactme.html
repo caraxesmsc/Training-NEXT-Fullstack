@@ -13,6 +13,13 @@
             text-align: center;
         }
         
+        .behind{
+          border-radius: 20px;
+          backdrop-filter: blur(3px);
+          
+        }
+        
+        
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
@@ -37,53 +44,58 @@
             </ul>
         </div>
     </nav>
-    <div class="card" style=" margin: 100px ;padding:50px ;">
+    <div class="card text-primary pattern" style=" margin: 100px ;padding:50px ;" >
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-sm">
-                <p class="h2">Contact ME!</p>
+            <div class="col-3 behind">
+                <p class="h1" >Contact me</p>
+                <p>Your time spent reviewing my portfolio is genuinely appreciated. Thank you for taking the opportunity to explore my work. If you have any inquiries, wish to collaborate, or simply want to connect, please feel free to reach out. I am eagerly looking forward to hearing from you and discussing potential opportunities or ideas we can explore together. Let's create something amazing!</p>
             </div>
-            <div class="col-sm">
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-6">
-                      <label for="validationCustom01" class="form-label">Your Name</label>
-                      <input type="text" class="form-control" id="validationCustom01"  required>
-                      <div class="valid-feedback">
-                        Looks good!
-                      </div>
+            <div class="col-2"></div>
+            <div class="col-6 behind">
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                  <label for="validationCustom01" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="validationCustom01"  required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <label for="validationCustomUsername" class="form-label">Your Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text text-primary" id="inputGroupPrepend"><i class="fas fa-envelope-open-text"></i></span>
+                    <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Please provide your email.
                     </div>
-                    
-                    <div class="col-md-6">
-                      <label for="validationCustomUsername" class="form-label">Your Email</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text text-primary" id="inputGroupPrepend"><i class="fas fa-envelope-open-text"></i></span>
-                        <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                          Please provide your email.
-                        </div>
-                      </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="validationCustom01"  required>
+                    <div class="valid-feedback">
+                      Looks good!
                     </div>
-                    <div class="col-md-12">
-                        <label for="validationCustom01" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="validationCustom01"  required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                      </div>
-                    <div class="col-md-12">
-                        <label for="validationCustom01" class="form-label">Message</label>
-                        <textarea class="form-control" aria-label="With textarea" id="validationCustom01" required></textarea>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                      </div>
-                   
-                    <div class="col-12">
-                      <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="validationCustom01" class="form-label">Message</label>
+                    <textarea class="form-control" aria-label="With textarea" id="validationCustom01" required></textarea>
+                    <div class="valid-feedback">
+                      Looks good!
                     </div>
-                  </form>
-                  <div class="col-1"><p></p></div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>  
+              </form>
+            <div class="col-1"><p></p></div>
         </div>
+      </div>
     </div>
 
     <script>
@@ -108,12 +120,11 @@
 })()
     </script>
     <!--! Footer -->
-    <footer class="bg-dark text-white text-center py-3" style="margin-top: 100px;">
+    
+
+    <footer class="bg-dark text-white text-center py-3" style="margin-top: 100px; position: fixed ; bottom: 0; width: 100%;">
         <div class="row">
-            <div class="container">
-                <h3>Follow me</h3>
-                
-            </div>
+            
         </div>
         <div class="row">
             <div class="container">

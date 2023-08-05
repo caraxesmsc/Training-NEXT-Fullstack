@@ -13,10 +13,16 @@
             text-align: center;
         }
         
+        .container{
+          border-radius: 20px;
+          backdrop-filter: blur(3px);
+          
+        }
+        
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
-<body class=".  bg-dark">
+<body class=".  bg-dark pattern">
     <!--! Section 1 Nav Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
     <div class="container-fluid">
@@ -37,19 +43,17 @@
             </ul>
         </div>
     </nav>
-    <div class="p-3 text-primary-emphasis bg-dark-subtle border border-primary-subtle rounded-3 " style="width: 70%; display: block; margin-left: auto; margin-right: auto; margin-top: 20px;">
-        <!--! Section 2 My photo -->
+    <div class="p-3 bg-dark  rounded-3 " style="color:antiquewhite; width: 80%; display: block; margin-left: auto; margin-right: auto; margin-top: 20px;">
         
-        <!--! Section 3  -->
         <div class="container">
             <div class="row">
                 
-                <div class="col-sm">
-                    <h3>Hello, I am <b style="color: rgb(8, 0, 70);">Mohamed Hossam Abdelalim</b></h3>
+                <div class="col-6">
+                    <h3>Hello, I'm<b style="color: rgb(255, 255, 255);"> Mohamed Hossam Abdelalim</b></h3>
                     <p style="text-align: justify;">A Software Engineering student at Ain Shams University, I am deeply passionate about the world of coding and its endless possibilities. Beyond technology, I find joy in staying active with invigorating gym sessions and unwinding through gaming. My ambition drives me to aim for esteemed organizations like Apple and Google, where I aspire to contribute meaningfully to the field of software engineering. I am always eager to embrace new opportunities for growth and learning, continually striving to excel in my chosen field.</p>
                 <div class="row" style="text-align: center;">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                        <div class="card border-primary mb-3 bg-transparent objectHover" >
+                        <div class="card border-secondary mb-3 bg-transparent text-secondary objectHover" >
                         <div class="card-body">
                             <h5 class="card-title">2+</h5>
                             <p class="card-text">Years of Experience</p>
@@ -57,8 +61,9 @@
                         </div>
                         </div>
                     </div>
+                    
                     <div class="col-sm-6">
-                        <div class="card border-primary mb-3 bg-transparent objectHover">
+                        <div class="card border-secondary mb-3 bg-transparent text-secondary objectHover">
                         <div class="card-body">
                             <h5 class="card-title">5+</h5>
                             <p class="card-text">Projects Completed</p>
@@ -66,13 +71,13 @@
                         </div>
                         </div>
                     </div>
-                    </div>
                 </div>
-                
-                <div class="col-sm">
-                    <img src="img/cv photo (Small) (nobg).png" class="rounded mx-auto d-block pictureHover" alt="my photo" style="max-width: 100%; height: 300px; display: block; margin-top: 25px;">
+            </div>
+            <div class="col-3"></div>
+                <div class="col-3">
+                    <img src="img/cv photo (Small) (nobg).png" class="rounded pictureHover" alt="my photo" style="max-width: 100%; height: 300px; display: block;" >
                 </div>
-                
+                <!-- <div class="col-1"></div> -->
             </div>
         </div>
     </div>
@@ -82,21 +87,21 @@
                 
             $(".objectHover").hover(function(){
                 $(this).removeClass();
-                $(this).addClass("card border-primary text-bg-primary mb-3 shadow-lg objectHover");
+                $(this).addClass("card border-primary text-bg-primary mb-3 shadow-lg  objectHover");
             }) 
             $(".objectHover").mouseleave(function(){
                 $(this).removeClass();
-                $(this).addClass("card border-primary bg-transparent mb-3 objectHover");
+                $(this).addClass("card border-secondary mb-3 bg-transparent text-secondary objectHover");
             })
         }
         {//picture hover
             $(".pictureHover").hover(function(){
                 $(this).removeClass();
-                $(this).addClass("rounded mx-auto d-block shadow-lg pictureHover");
+                $(this).addClass("rounded  shadow-lg pictureHover");
             })
             $(".pictureHover").mouseleave(function(){
                 $(this).removeClass();
-                $(this).addClass("rounded mx-auto d-block pictureHover");
+                $(this).addClass("rounded  pictureHover");
             })
             
         }
