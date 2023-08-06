@@ -1,6 +1,8 @@
 # Training-NEXT-Fullstack
 This is the folder where i save my hands on during my training for NEXT academy's Fullstack course
 ### Each Lecture inlcudes Hands-on and Assignments.
+# Lecture 10
+Intro to Backend (PHP)
 # Lecture 6, 7, 8 & 9
 Bootstrap & UI/UX
 # Lecture 5
