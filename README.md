@@ -9,10 +9,11 @@ Lecture #     | Content
 11 | MySQL
 12  | Laravel 
 13 | 
-# Frontend
-Lecture #     | Content
-------------- | -------------
-1 and 2  | Basics of HTML and CSS
-3 and 4  | JavaScript Basics & Advanced
-5           | jQuery
-6, 7, 8 & 9 | Bootstrap & UI/UX
+
+| Frontend                             || | Backend                      ||       
+Lecture #     | Content       					| Lecture #     | Content
+------------- | ------------- 					| ------------- | -------------
+1 and 2  | Basics of HTML and CSS 			| 10  					| PHP
+3 and 4  | JavaScript Basics & Advanced | 11 						| MySQL
+5           | jQuery 										| 12         		| 
+6, 7, 8 & 9 | Bootstrap & UI/UX 				| 13 						| 
