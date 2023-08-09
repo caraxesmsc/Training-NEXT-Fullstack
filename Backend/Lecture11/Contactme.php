@@ -1,16 +1,25 @@
 <?php
 
+
+
+try {
 if($_SERVER['REQUEST_METHOD']){
     $emailTo="omnia@gmail";
     $subject=$_POST["subject"] ;
     $body=$_POST["msg"];
     $headers="From: ".$_POST["email"];
-    if(mail($emailTo,$subject,$body, $headers)){
-      echo"your email sent successfully";}
-    else{
-      echo"try again later";
-    } 
+    
+      if(mail($emailTo,$subject,$body, $headers)){
+        echo"your email sent successfully";}
+      else{
+        echo"try again later";
+      } 
+    }
+  } catch (Exception $th) {
+    echo "try again laterr";
   }
+  
+  
 
 ?>
 <html lang="en">
@@ -18,20 +27,12 @@ if($_SERVER['REQUEST_METHOD']){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> -->
-
-    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.css" media="screen">
-  
-    <!-- Replace these lines with the CDN links in the <head> section -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script> -->
-    <script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
-  </head>
-<body >
-
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body class=".bg-dark">
     <!--! Section 1 Nav Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
     <div class="container-fluid">
@@ -61,10 +62,10 @@ if($_SERVER['REQUEST_METHOD']){
             </div>
             <div class="col-2"></div>
             <div class="col-6 behind">
-              <form class="row g-3 needs-validation" novalidate method="POST">
+              <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-6">
                   <label for="validationCustom01" class="form-label">Your Name</label>
-                  <input type="text" class="form-control" id="validationCustom01" name="name"  required>
+                  <input type="text" class="form-control" id="validationCustom01"  required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
@@ -74,7 +75,7 @@ if($_SERVER['REQUEST_METHOD']){
                   <label for="validationCustomUsername" class="form-label">Your Email</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text text-primary" id="inputGroupPrepend"><i class="fas fa-envelope-open-text"></i></span>
-                    <input type="email" class="form-control" name="email" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
                       Please provide your email.
                     </div>
@@ -83,7 +84,7 @@ if($_SERVER['REQUEST_METHOD']){
 
                 <div class="col-md-12">
                     <label for="validationCustom01" class="form-label">Subject</label>
-                    <input type="text" class="form-control" name="subject" id="validationCustom01"  required>
+                    <input type="text" class="form-control" id="validationCustom01"  required>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -91,7 +92,7 @@ if($_SERVER['REQUEST_METHOD']){
 
                 <div class="col-md-12">
                     <label for="validationCustom01" class="form-label">Message</label>
-                    <textarea class="form-control" name="msg" aria-label="With textarea" id="validationCustom01" required></textarea>
+                    <textarea class="form-control" aria-label="With textarea" id="validationCustom01" required></textarea>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -106,6 +107,8 @@ if($_SERVER['REQUEST_METHOD']){
       </div>
     </div>
 
+
+    <!--! Footer -->
     
 
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 100px; position: fixed ; bottom: 0; width: 100%;">
