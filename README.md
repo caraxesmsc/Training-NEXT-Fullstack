@@ -10,8 +10,7 @@ Lecture #     | Content
 12         | 
 13 | 
 
-Frontend                              	|| Backend         
-------------------------------					|-----------------------------
+| Frontend                             || Backend                      ||       
 Lecture #     | Content       					| Lecture #     | Content
 ------------- | ------------- 					| ------------- | -------------
 1 and 2  | Basics of HTML and CSS 			| 10  					| PHP
