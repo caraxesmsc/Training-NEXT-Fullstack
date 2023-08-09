@@ -6,8 +6,8 @@ This is the folder where i save my hands on during my training for NEXT academy'
 MySQL
 ## Lecture 10
 Backend (PHP)
+
 # Frontend
-<hr>
 ## Lecture 6, 7, 8 & 9
 Bootstrap & UI/UX
 ## Lecture 5
