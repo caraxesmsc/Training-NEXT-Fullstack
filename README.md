@@ -7,7 +7,7 @@ Lecture #     | Content
 ------------- | -------------
 10  | PHP
 11 | MySQL
-12         | 
+12  | Laravel 
 13 | 
 # Frontend
 Lecture #     | Content
