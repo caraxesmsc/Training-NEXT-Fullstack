@@ -9,12 +9,6 @@ Lecture #     | Content
 11 | MySQL
 12         | 
 13 | 
-## Lecture 11
-
-MySQL
-## Lecture 10
-Backend (PHP)
-
 # Frontend
 Lecture #     | Content
 ------------- | -------------
