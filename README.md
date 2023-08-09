@@ -10,7 +10,7 @@ Lecture #     | Content
 12         | 
 13 | 
 
-Frontend                      ||| Backend
+| Frontend                      | Backend  |
 ------------------------------|-----------------------------
 Lecture #     | Content       | Lecture #     | Content
 ------------- | ------------- | ------------- | -------------
