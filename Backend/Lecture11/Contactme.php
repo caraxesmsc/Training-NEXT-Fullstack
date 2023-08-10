@@ -2,24 +2,57 @@
 
 
 
-try {
-if($_SERVER['REQUEST_METHOD']){
-    $emailTo="omnia@gmail";
-    $subject=$_POST["subject"] ;
-    $body=$_POST["msg"];
-    $headers="From: ".$_POST["email"];
-    
-      if(mail($emailTo,$subject,$body, $headers)){
-        echo"your email sent successfully";}
-      else{
-        echo"try again later";
-      } 
-    }
-  } catch (Exception $th) {
-    echo "try again laterr";
-  }
+$alert_visibility=false;
+$form_status=null;
+$emailTo="omnia@gmail";
+$id=null;
+$name=null;
+$email=null;
+$subject=null;
+$body=null;
+$isMailSent=null;
+$conn= mysqli_connect('localhost','root','','DatabaseL11ContactMe');
+$status_ReadForm=null;
+if(!$conn || ($_SERVER['REQUEST_METHOD']=='post'&& !( $_POST['Name']==null || $_POST['Email']==null || $_POST['Subject']==null || $_POST['Body']))){
+  $status_ReadForm_error="connection error".mysqli_connect_error();
+  $status_ReadForm= "Error Submitting form";
+  $alert_color="Danger";
+  $alert_visibility=true;
+}elseif($_SERVER['REQUEST_METHOD']=='post'){
+  $alert_visibility=true;
+  $alert_color="Success";
+  $status_ReadForm= "Form Submitted Successfully";
   
+  $name=$_POST['Name'] ;
+  $email=$_POST['Email'] ;
+  $subject=$_POST['Subject'];
+  $body=$_POST['Body'];
   
+  $query_to_db="INSERT INTO `contactme` (`Name` , `Email`,`Subject`,`Body`) VALUES ('$name','$email','$subject','$body')";
+  $query1="SELECT * FROM `Form` WHERE 1";
+  // if($result =mysqli_query($conn,$query1)){
+    //     while($row=mysqli_fetch_array($result)){
+      //         // echo   . $row['name']. $row['email'] .$row['password']."<br>";
+      
+      //         $id=$row['id'];
+      //         // $name=$row['name'];
+      //         // $email=$row['email'];
+      //         // $pass=$row['pass'];
+      //     }
+      // }
+    if(mysqli_query($conn,$query_to_db)){
+        $form_status="Registered succesfully";
+      }else{
+        $form_status="Error during Registration";
+        
+      }
+      
+    }else{
+      $alert_visibility=true;
+      $status_ReadForm= "Form Failed";
+      $form_status="Registration Failed";
+      $alert_color="dark";
+}
 
 ?>
 <html lang="en">
@@ -31,8 +64,15 @@ if($_SERVER['REQUEST_METHOD']){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+      <!-- Bootstrap core CSS-->
+  <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
 </head>
-<body class=".bg-dark">
+<body class="bg-dark">
     <!--! Section 1 Nav Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
     <div class="container-fluid">
@@ -58,14 +98,14 @@ if($_SERVER['REQUEST_METHOD']){
             <div class="col-1"></div>
             <div class="col-3 behind">
                 <p class="h1" >Contact me</p>
-                <!-- <p>Your time spent reviewing my portfolio is genuinely appreciated. Thank you for taking the opportunity to explore my work. If you have any inquiries, wish to collaborate, or simply want to connect, please feel free to reach out. I am eagerly looking forward to hearing from you and discussing potential opportunities or ideas we can explore together. Let's create something amazing!</p> -->
+                <p>Your time spent reviewing my portfolio is genuinely appreciated. Thank you for taking the opportunity to explore my work. If you have any inquiries, wish to collaborate, or simply want to connect, please feel free to reach out. I am eagerly looking forward to hearing from you and discussing potential opportunities or ideas we can explore together. Let's create something amazing!</p>
             </div>
             <div class="col-2"></div>
             <div class="col-6 behind">
-              <form class="row g-3 needs-validation" novalidate>
+              <form class="row g-3 needs-validation" method="post" novalidate>
                 <div class="col-md-6">
                   <label for="validationCustom01" class="form-label">Your Name</label>
-                  <input type="text" class="form-control" id="validationCustom01"  required>
+                  <input type="text" class="form-control" id="validationCustom01" name="Name" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
@@ -75,7 +115,7 @@ if($_SERVER['REQUEST_METHOD']){
                   <label for="validationCustomUsername" class="form-label">Your Email</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text text-primary" id="inputGroupPrepend"><i class="fas fa-envelope-open-text"></i></span>
-                    <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <input type="email"name="Email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
                       Please provide your email.
                     </div>
@@ -84,7 +124,7 @@ if($_SERVER['REQUEST_METHOD']){
 
                 <div class="col-md-12">
                     <label for="validationCustom01" class="form-label">Subject</label>
-                    <input type="text" class="form-control" id="validationCustom01"  required>
+                    <input type="text"name="Subject" class="form-control" id="validationCustom01"  required>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -92,17 +132,22 @@ if($_SERVER['REQUEST_METHOD']){
 
                 <div class="col-md-12">
                     <label for="validationCustom01" class="form-label">Message</label>
-                    <textarea class="form-control" aria-label="With textarea" id="validationCustom01" required></textarea>
+                    <input class="form-control" name="Body" aria-label="With textarea" id="validationCustom01" required>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
                 </div>
 
                 <div class="col-12">
-                  <button class="btn btn-primary" type="submit">Submit form</button>
+                  <input class="btn btn-primary" type="Submit">
                 </div>  
               </form>
             <div class="col-1"><p></p></div>
+            <div class="alert alert-<?php echo $alert_color; ?>" style="<?php echo $alert_visibility ? "display:block;" : "display:none;" ?>" role="alert">
+              <?php echo $status_ReadForm ?>
+              <br>
+              <?php echo $form_status ?>
+            </div>
         </div>
       </div>
     </div>
