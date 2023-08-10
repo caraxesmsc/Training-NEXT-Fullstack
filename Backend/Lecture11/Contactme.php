@@ -1,7 +1,7 @@
 <?php
 
 
-
+//! Null Defining all variables to avoid errors
 $alert_visibility=false;
 $form_status=null;
 $emailTo="omnia@gmail";
@@ -11,25 +11,30 @@ $email=null;
 $subject=null;
 $body=null;
 $isMailSent=null;
-$conn= mysqli_connect('localhost','root','','DatabaseL11ContactMe');
 $status_ReadForm=null;
-if(!$conn || ($_SERVER['REQUEST_METHOD']=='post'&& !( $_POST['Name']==null || $_POST['Email']==null || $_POST['Subject']==null || $_POST['Body']))){
+//! Establishing connection with Database
+$conn= mysqli_connect('localhost','root','','DatabaseL11ContactMe');
+
+//! No Connection or Form submitted while one or more fields empty
+if(!$conn || ($_SERVER['REQUEST_METHOD']=='POST'&& !( $_POST['Name']==null || $_POST['Email']==null || $_POST['Subject']==null || $_POST['Body']))){
   $status_ReadForm_error="connection error".mysqli_connect_error();
   $status_ReadForm= "Error Submitting form";
   $alert_color="Danger";
   $alert_visibility=true;
-}elseif($_SERVER['REQUEST_METHOD']=='post'){
+  //! Otherwise if form is submitted
+}elseif($_SERVER['REQUEST_METHOD']=='POST'){
+  //! Alert Styling
   $alert_visibility=true;
   $alert_color="Success";
   $status_ReadForm= "Form Submitted Successfully";
-  
+  //! Storing into variables
   $name=$_POST['Name'] ;
   $email=$_POST['Email'] ;
   $subject=$_POST['Subject'];
   $body=$_POST['Body'];
-  
-  $query_to_db="INSERT INTO `contactme` (`Name` , `Email`,`Subject`,`Body`) VALUES ('$name','$email','$subject','$body')";
-  $query1="SELECT * FROM `Form` WHERE 1";
+  //! Sending to Database
+  $query_to_db="INSERT INTO `contactme` (`Name`,`Email`,`Subject`,`Body`) VALUES ('$name','$email','$subject','$body')";
+  // $query1="SELECT * FROM `Form` WHERE 1";
   // if($result =mysqli_query($conn,$query1)){
     //     while($row=mysqli_fetch_array($result)){
       //         // echo   . $row['name']. $row['email'] .$row['password']."<br>";
@@ -40,15 +45,16 @@ if(!$conn || ($_SERVER['REQUEST_METHOD']=='post'&& !( $_POST['Name']==null || $_
       //         // $pass=$row['pass'];
       //     }
       // }
+    //! Perform Query
     if(mysqli_query($conn,$query_to_db)){
         $form_status="Registered succesfully";
       }else{
         $form_status="Error during Registration";
         
       }
-      
+    //! if this is true then some part of the code is wrong
     }else{
-      $alert_visibility=true;
+      $alert_visibility=false;
       $status_ReadForm= "Form Failed";
       $form_status="Registration Failed";
       $alert_color="dark";
@@ -73,7 +79,7 @@ if(!$conn || ($_SERVER['REQUEST_METHOD']=='post'&& !( $_POST['Name']==null || $_
 
 </head>
 <body class="bg-dark">
-    <!--! Section 1 Nav Bar -->
+    <!--Section 1 Nav Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
