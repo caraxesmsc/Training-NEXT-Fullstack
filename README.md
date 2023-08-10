@@ -1,14 +1,13 @@
 # Training-NEXT-Fullstack
 This is the folder where i save my hands on during my training for NEXT academy's Fullstack course
-### Each Lecture inlcudes Hands-on and Assignments.
+### Each Lecture iis 4 hours and inlcudes Hands-on and Assignments.
 
 # Backend
 Lecture #     | Content
 ------------- | -------------
 10  | PHP
 11 | MySQL
-12  | Laravel 
-13 | 
+12, 13, 14 & 15   | Laravel 
 
 # Frontend 
 
