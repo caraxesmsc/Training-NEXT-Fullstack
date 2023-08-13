@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\StudentController;
+
+Route::get('/',[StudentController::class,'indexFunction']);
+Route::get('/about',[StudentController::class,'aboutFunction']);
+Route::get('/contact',[StudentController::class,'contactFunction']);
+
 Route::get('/', function () {
     return view('welcome');
 });
