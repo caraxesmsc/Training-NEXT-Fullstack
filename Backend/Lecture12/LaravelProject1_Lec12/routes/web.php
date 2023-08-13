@@ -25,3 +25,5 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+Route::post('/create',[StudentController::class],'formSubmit');

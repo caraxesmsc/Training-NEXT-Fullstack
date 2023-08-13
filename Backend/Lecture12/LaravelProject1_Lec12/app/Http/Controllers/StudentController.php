@@ -18,4 +18,7 @@ class StudentController extends Controller
     public function contactFunction (){
         return view ('contact');
     }
+    public function formSubmit(){
+        
+    }
 }
