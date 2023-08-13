@@ -1,0 +1,474 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <style>
+        /* Additional styles for Section 3 */
+        .section-3-container {
+            margin: 100px auto; /* Adjust the margin as needed */
+            text-align: center;
+        }
+        
+        .container{
+        border-radius: 20px;
+        backdrop-filter: blur(3px);
+        
+        }
+        body{
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+        .checked {
+            color: orange;
+            }
+        .halfchecked {
+            color: gray;
+            
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body class=".  bg-dark pattern">
+    <!--! Section 1 Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="project.html">Projects</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" aria-current="page" href="contactme.html">Contact me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="p-3 bg-dark  rounded-3 " style="color:antiquewhite; width: 80%; display: block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-6">
+                    <h3>Hello, I'm<b style="color: rgb(255, 255, 255);"> Mohamed Hossam Abdelalim</b></h3>
+                    <p style="text-align: justify;">A Software Engineering student at Ain Shams University, I am deeply passionate about the world of coding and its endless possibilities. Beyond technology, I find joy in staying active with invigorating gym sessions and unwinding through gaming. My ambition drives me to aim for esteemed organizations like Apple and Google, where I aspire to contribute meaningfully to the field of software engineering. I am always eager to embrace new opportunities for growth and learning, continually striving to excel in my chosen field.</p>
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card border-secondary mb-3 bg-transparent text-secondary objectHover" >
+                        <div class="card-body">
+                            <h5 class="card-title">2+</h5>
+                            <p class="card-text">Years of Experience</p>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <div class="card border-secondary mb-3 bg-transparent text-secondary objectHover">
+                        <div class="card-body">
+                            <h5 class="card-title">5+</h5>
+                            <p class="card-text">Projects Completed</p>
+                        
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 1px;">
+                        <button class="btn btn-outline-primary" type="button" onclick="downloadPDF()" ><i class="fas fa-file-pdf" style="color: #ffffff;"></i> Download CV</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                
+            </div>
+                <div class="col-3" style="display: flex;
+                align-items: center;">
+                    <img src="img/cv photo (Small) (nobg).png" class="rounded pictureHover" alt="my photo" style="max-width: 100%; max-height: 100%; display: block;" >
+                </div>
+                <!-- <div class="col-1"></div> -->
+            </div>
+        </div>
+    </div>
+    <!--? jQuery for cards -->
+    <script>
+        {//first 2 Cards hover
+                
+            $(".objectHover").hover(function(){
+                $(this).removeClass();
+                $(this).addClass("card border-primary text-bg-primary mb-3 shadow-lg  objectHover");
+            }) 
+            $(".objectHover").mouseleave(function(){
+                $(this).removeClass();
+                $(this).addClass("card border-secondary mb-3 bg-transparent text-secondary objectHover");
+            })
+        }
+        {//picture hover
+            $(".pictureHover").hover(function(){
+                $(this).removeClass();
+                $(this).addClass("rounded  shadow-lg pictureHover");
+            })
+            $(".pictureHover").mouseleave(function(){
+                $(this).removeClass();
+                $(this).addClass("rounded  pictureHover");
+            })
+            
+        }
+        {//text hover
+            $(".textHover").hover(function(){
+                $(this).css("color","rgb(82, 59, 255)");
+            })
+            $(".textHover").mouseleave(function(){
+                $(this).css("color","rgb(8, 0, 70)");
+            })
+            
+        }
+
+        function downloadPDF() {
+            var url = "Lecture8\img\My CV-aug.pdf";
+            var filename = "Mohamed-Hossam-cv.pdf";
+
+            var anchor = document.createElement("a");
+            anchor.href = "url";
+            anchor.download = filename;
+            anchor.click();
+            }
+    </script>
+
+<script>
+    class Skill{
+        // let Name;
+        // let Rating;
+        // let Type;
+        // let isLearning;
+        constructor (Name,Rating,Type,isLearning){
+            this.Name = Name;
+            this.Rating = Rating;
+            this.Type=Type;
+            this.isLearning=isLearning;
+        }
+        
+
+
+    }
+
+
+    // Class that holds a collection of players and properties and functions for the group
+    class Skills {
+        constructor(){
+            this.Skills = []
+        }
+        // create a new player and save it in the collection
+        newSkill(Skill){
+            this.Skills.push(Skill);
+        }
+        get allSkills(){
+            return this.Skills;
+        }
+        // this could include summary stats like average score, etc. For simplicy, just the count for now
+        get numberOfSkills(){
+            return this.Skills.length;
+        }
+
+        
+}
+
+    let arr = new Skills();
+    arr.newSkill(new Skill("C++",4.5,"Language",false));
+    arr.newSkill(new Skill("C",2,"Language",true));
+    arr.allSkills.forEach(Skills => console.log(skill.name));
+    
+</script>
+
+
+
+
+
+
+
+
+    <!--! SKills  -->
+    <div class="container" style="padding-top: 20px;">
+        <h1 style="color: antiquewhite; text-align: center; padding-bottom: 20px;">My Skills</h1>
+        <!--? Row 1 -->
+        <div class="row">
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">C :</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 40%;">40%</div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">HTML :</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar progress-bar" style="width: 70%;">70%</div>
+                </div>
+            </div>
+        </div>
+        <!-- ? Row 2 -->
+        <div class="row">
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">C++ :</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger progress-bar progress-bar" style="width: 60%;">60% </div>
+                </div>
+                <?php echo "5555555555";?>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">JavaScript:</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%;">60%</div>
+                </div>
+            </div>
+        </div>
+        <!-- ? Row 3 -->
+        <div class="row">
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">Java :</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger progress-bar- progress-bar" style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">jQuery:</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+                </div>
+            </div>
+        </div>
+        <!-- ? Row 4 -->
+        <div class="row">
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">Python :</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 30%;">30%</div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">PHP:</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 20%;">20%</div>
+                </div>
+            </div>
+        </div>
+        <!-- ? Row 4 -->
+        <div class="row">
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">Flutter :</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 20%;">20%</div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">Next:</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%;">10%</div>
+                </div>
+            </div>
+        </div>
+        <!-- ? Row 5 -->
+        <div class="row">
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">Assembly:</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger progress-bar progress-bar" style="width: 60%;">60%</div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1">
+                <h5 style="color: antiquewhite;">MySQL:</h5>
+            </div>
+            <div class="col-sm" style=" padding-top: 5px;">
+                <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%;">30%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--! TImeline -->
+    <div class="container" style="padding-top: 20px;">
+        <i class="fas fa-star" style="color: #ffa500;"></i>
+        <i class="fas fa-star" style="color: #ffa500;"></i>
+        <i class="fas fa-star" style="color: #ffa500;"></i>
+        <i class="fas fa-star-half-alt" style="color: #ffa500;"></i>
+        <i class="far fa-star" style="color: #ffa500;"></i>
+
+
+        <h1 style="color: antiquewhite; text-align: center; padding-bottom: 20px;">My Education</h1>
+        <!-- Instance 1 -->
+        <div class="row">
+            <div class="col-1">
+                <div class="row" style="
+                height: 35px;
+                width: 35px;
+                background-color: blue;
+                border-radius: 50%;
+                display: inline-block;
+                padding-right: 2px;
+                position: relative;">
+                    <i class="fas fa-user-graduate" style="color: #cbdbf6; padding-top: 8px; padding-right: 2px;"></i>
+                </div>
+                <div class="row" style="
+                height: 80px;
+                width: 5px;
+                background-color: blue;
+                display:inherit;
+                padding-right: 2px;
+                margin-bottom: 30px;
+                margin-left: 3px;
+                position: relative;"></div>
+                
+            </div>
+            <div class="col-11" style="display: inline;">
+                <div class="row">
+                    <span class="badge text-bg-light" style="width: fit-content; margin-bottom: 10px;margin-left: 10px;">2021- <b>Present</b></span>
+                </div>
+                <div class="row">
+                    <p class="h5" style="color: antiquewhite;">Computer Engineering and Software Systems B.Sc.</p>
+                </div>
+                <div class="row">
+                    <p class="h6" style="color: rgb(255, 216, 165);">Ain Shams University International Credit Hours Engineering Programs, Cairo, Egypt</p>
+                </div>
+                <div class="row">
+                    <p class="h6" style="color: rgb(255, 216, 165);">University of East London, London, UK</p>
+                </div>
+            </div>
+        </div>
+        <!-- Instance 2 -->
+        <div class="row">
+            <div class="col-1">
+                <div class="row" style="
+                height: 35px;
+                width: 35px;
+                background-color: blue;
+                border-radius: 50%;
+                display: inline-block;
+                padding-right: 2px;
+                position: relative;">
+                    <i class="fas fa-user-graduate" style="color: #cbdbf6; padding-top: 8px; padding-right: 2px;"></i>
+                </div>
+                <div class="row" style="
+                height: 80px;
+                width: 5px;
+                background-color: blue;
+                display:inherit;
+                padding-right: 2px;
+                margin-bottom: 30px;
+                margin-left: 3px;
+                position: relative;"></div>
+                
+            </div>
+            <div class="col-11" style="display: inline;">
+                <div class="row">
+                    <span class="badge text-bg-light" style="width: fit-content; margin-bottom: 10px;margin-left: 10px;">2019-2021</span>
+                </div>
+                <div class="row">
+                    <p class="h5" style="color: antiquewhite;">International General Certificate of Secondary Education</p>
+                </div>
+                <div class="row">
+                    <p class="h6" style="color: rgb(255, 216, 165);">1 A A-level Mathematics</p>
+                </div>
+                <div class="row">
+                    <p class="h6" style="color: rgb(255, 216, 165);">7 A+  O-level  and 1 A O-level</p>
+                </div>
+            </div>
+        </div>
+        <!-- Instance 3 -->
+        <div class="row">
+            <div class="col-1">
+                <div class="row" style="
+                height: 35px;
+                width: 35px;
+                background-color: blue;
+                border-radius: 50%;
+                display: inline-block;
+                padding-right: 2px;
+                position: relative;">
+                    <i class="fas fa-user-graduate" style="color: #cbdbf6; padding-top: 8px; padding-right: 2px;"></i>
+                </div>
+                
+                
+            </div>
+            <div class="col-11" style="display: inline;">
+                <div class="row">
+                    <span class="badge text-bg-light" style="width: fit-content; margin-bottom: 10px;margin-left: 10px;">2008-2019</span>
+                </div>
+                <div class="row">
+                    <p class="h5" style="color: antiquewhite;">Primary Education</p>
+                </div>
+                <div class="row">
+                    <p class="h6" style="color: rgb(255, 216, 165);">Al-Wadi International School, Jeddah, Saudi Arabia</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--! Footer -->
+    <footer class="bg-dark text-white text-center py-3" style="margin-top: 100px;">
+        <div class="row">
+            <div class="container">
+                <h3>Follow me</h3>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-sm">
+                    <i class="fab fa-twitter"></i>
+                
+                    <i class="fab fa-instagram"></i>
+                    
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <p>&copy; 2023 Mohamed Hossam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+</body>
+</body>
+</html>

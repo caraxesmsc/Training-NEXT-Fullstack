@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <style>
+        /* Additional styles for Section 3 */
+        .section-3-container {
+            margin: 100px auto; /* Adjust the margin as needed */
+            text-align: center;
+        }
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body class=".  bg-dark">
+    <!--! Section 1 Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="project.html">Projects</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" aria-current="page" href="contactme.html">Contact me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="card bg-transparent border-primary text-primary"style=" width:80%;display: block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+        <p class="h1" style="text-align: center  ;">My Projects</p>
+    
+        <!--! Section 4 Products -->
+        <div class="container" style="width: 100%; display: block; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;">
+            <div class="row row-cols-1 row-cols-md-2 g-4" >
+                <!--? New Project -->
+                <div class="col">
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover" style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title" ></a> MIPS Assembly Processor Project  </h5>
+                            <p class="card-text">Built all necessary modules and components of the MIPS Processor with Harvard architecture.</p>   
+                        </div>
+                    </div>
+                </div>
+                <!--? end of project -->
+                <!--? New Project -->
+                <div class="col">
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g2" ><a href="https://github.com/caraxesmsc/LibrarySystemProject" target="_blank" id="linkClickenBTN"><i class="fab fa-github g2" style="color: #b82828;" ></i></a> Library Management System Project  </h5>
+                            <p class="card-text">With GUI in <b>Java</b>, applying <i>Object Oriented Programming</i> concepts.</p>   
+                        </div>
+                    </div>
+                </div>
+                <!--? end of project -->
+                <!--? New Project -->
+                <div class="col">
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g3" ><a href="https://github.com/caraxesmsc/MovieLibraryViewer" target="_blank" id="linkClickenBTN"><i class="fab fa-github g3" style="color: #b82828;" ></i></a> Movie Library Viewer App Project  </h5>
+                            <p class="card-text">With <b>Python</b> for metadata reading and writing and GUI in <b>Java</b>, applying <i>Object Oriented Programming</i> concepts.</p>  
+                        </div>
+                    </div>
+                </div>
+                <!--? end of project -->
+                <!--? New Project -->
+                <div class="col">
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g4" ><a href="https://github.com/Mark-S2004/Maestro-food-truck-website" target="_blank" id="linkClickenBTN"><i class="fab fa-github g4" style="color: #b82828;" ></i></a> Food Ordering Website Project  </h5>
+                            <p class="card-text">A Full stack website with login/sign-up, menu, cart and checkout.
+                                With <b>HTML, CSS, JavaScript, and Python Django</b>, applying <i>Software Engineering</i> concepts.
+                                </p>   
+                        </div>
+                    </div>
+                </div>
+                <!--? end of project -->
+                <!--? New Project -->
+                <div class="col">
+                    <div class="card border-primary bg-transparent text-primary mb-3 objectHover"style="height: 120px;">
+                        <div class="card-body ">
+                            <h5 class="card-title g3" >Criminal Management System Project </h5>
+                            <p class="card-text">A system where the user can add/remove/edit/view crimes and criminals. With GUI in <b>C++</b></p>   
+                        </div>
+                    </div>
+                </div>
+                <!--? end of project -->
+                
+                
+            </div>
+        </div>
+    </div>  
+
+    <script>
+        {//first 2 Cards hover
+                    
+            $(".objectHover").hover(function(){
+                    $(this).removeClass();
+                    $(this).addClass("card border-primary text-bg-primary mb-3 shadow-lg objectHover");
+                }) 
+                $(".objectHover").mouseleave(function(){
+                    $(this).removeClass();
+                    $(this).addClass("card border-primary bg-transparent text-primary mb-3 objectHover");
+                })
+                $(".g2").click(function(){$(this).css("color","white")})
+                $(".g3").click(function(){$(this).css("color","white")})
+                $(".g4").click(function(){$(this).css("color","white")})
+            }
+    </script>
+    <!--! Footer -->
+    <footer class="bg-dark text-white text-center py-3" style="margin-top: 100px;">
+        <div class="row">
+            <div class="container">
+                <h3>Follow me</h3>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="col-sm">
+                    <i class="fab fa-twitter"></i>
+                
+                    <i class="fab fa-instagram"></i>
+                    
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <p>&copy; 2023 Mohamed Hossam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+</body>
+</body>
+</html>
