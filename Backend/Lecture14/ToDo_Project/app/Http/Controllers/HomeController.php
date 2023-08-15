@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\todoModel;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +23,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $tasks=todoModel::all();
+        return view('home')->with('data',$tasks);
+    }
+    public function new()
+    {
+        return view('new');
+    }
+    public function add(request $request)
+    {
+        todoModel::create($request -> all());
+        return redirect(to:'/home');
     }
 }
