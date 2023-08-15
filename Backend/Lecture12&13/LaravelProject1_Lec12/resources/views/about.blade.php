@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>My first Laravel Project</h1>
-    <form action="" method="post">
+    <form action="/create" method="post">
         <label>Name:</label>
         @csrf
         <input type="text" name="name" >
