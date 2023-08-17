@@ -40,4 +40,10 @@ class HomeController extends Controller
         $task->delete();
         return redirect(to:'/home');
     }
+    public function update($id){
+        $task=todoModel::find($id);
+        view('new');
+        $task->update();
+        return redirect(to:'/home');
+    }
 }

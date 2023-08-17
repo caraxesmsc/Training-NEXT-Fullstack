@@ -23,3 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/new', [App\Http\Controllers\HomeController::class, 'new']);
 Route::post('/add', [App\Http\Controllers\HomeController::class, 'add']);
 Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);
+Route::get('/update/{id}', [App\Http\Controllers\HomeController::class, 'update']);

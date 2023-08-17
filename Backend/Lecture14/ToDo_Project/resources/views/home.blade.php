@@ -28,20 +28,20 @@
                 <table class="table table-striped border-warning ">
                 <thead>
                     <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Task</th>
                     <th scope="col">Details</th>
                     <th scope="col">Deadline</th>
+                    <th scope="col">Edit</th>
                     <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($data as $value)
                     <tr>
-                    <td>{{$value->id}}</td>
                     <td>{{$value->name}}</td>
                     <td>{{$value->details}}</td>
                     <td>{{$value->deadline}}</td>
+                    <td><a href="{{url('/update/'.$value->id)}}}" class="btn btn-outline-primary">Edit</a></td>
                     <td><a href="{{url('/delete/'.$value->id)}}}" class="btn btn-outline-danger">Done</a></td>
                     </tr>
                     @endforeach
