@@ -35,4 +35,9 @@ class HomeController extends Controller
         todoModel::create($request -> all());
         return redirect(to:'/home');
     }
+    public function delete($id){
+        $task=todoModel::find($id);
+        $task->delete();
+        return redirect(to:'/home');
+    }
 }
