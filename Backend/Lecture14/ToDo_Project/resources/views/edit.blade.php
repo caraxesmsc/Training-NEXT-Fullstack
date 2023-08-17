@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card bg-primary text-light">
                 <div class="card-header">Edit task</div>
-
+                
                 <div class="card-body">
                     <form action="{{url('/updatedData/'.$toEdit->id)}}" method="post">
                         @csrf
@@ -27,7 +27,16 @@
                         <br>
                         <button type="submit" class="btn btn-success">Save Changes</button>
                     </form>
-
+                    
+                </div>
+            </div>
+            
+            <div class="card bg-danger text-light">
+                <div class="card-header">Errors</div>
+                <div class="card-body">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -31,7 +31,12 @@ class HomeController extends Controller
         return view('new');
     }
     public function add(request $request)
-    {
+    {   
+        $request->validate([
+            'name' => 'required|max:250',
+            'details' => 'required|max:250',
+            'deadline' => 'required'
+        ]);
         todoModel::create($request -> all());
         return redirect(to:'/home');
     }
@@ -46,6 +51,11 @@ class HomeController extends Controller
     }
     
     public function updatedDatafunc($id,request $request){
+        $request->validate([
+            'name' => 'required|max:250',
+            'details' => 'required|max:250',
+            'deadline' => 'required'
+        ]);
         $task=todoModel::find($id);
         $task->update($request -> all());
         return redirect(to:'/home');

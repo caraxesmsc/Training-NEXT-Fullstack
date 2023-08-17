@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card bg-danger text-light">
+            <div class="card bg-dark-subtle text-dark">
                 <div class="card-header">To DO</div>
 
                 <div class="card-body">
@@ -31,6 +31,14 @@
 
                 </div>
             </div>
+            <div class="card bg-danger text-light">
+            <div class="card-header">Errors</div>
+            <div class="card-body">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </div>
+        </div>
         </div>
     </div>
 </div>
