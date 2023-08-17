@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container ">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -22,10 +22,10 @@
 
                 </div>
             </div>
-            <div class="card bg-primary text-light">
+            <div class="card bg-warning text-dark">
                 <div class="card-header">Tasks</div>
                 <div class="card-body">
-                <table class="table table-striped">
+                <table class="table table-striped border-warning ">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
@@ -42,7 +42,7 @@
                     <td>{{$value->name}}</td>
                     <td>{{$value->details}}</td>
                     <td>{{$value->deadline}}</td>
-                    <td><a href="" class="btn btn-outline-danger">Done</a></td>
+                    <td><a href="{{url('/delete/'.$value->id)}}}" class="btn btn-outline-danger">Done</a></td>
                     </tr>
                     @endforeach
                 </tbody>
