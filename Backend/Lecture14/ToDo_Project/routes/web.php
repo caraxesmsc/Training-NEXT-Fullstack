@@ -24,4 +24,4 @@ Route::get('/new', [App\Http\Controllers\HomeController::class, 'new']);
 Route::post('/add', [App\Http\Controllers\HomeController::class, 'add']);
 Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete']);
 Route::get('/update/{id}', [App\Http\Controllers\HomeController::class, 'update']);
-// Route::get('/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit'])->id('id');
+Route::post('/updatedData/{id}', [App\Http\Controllers\HomeController::class, 'updatedDatafunc']);

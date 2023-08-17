@@ -44,4 +44,11 @@ class HomeController extends Controller
         $task=todoModel::find($id);
         return view('edit')->with('toEdit',$task);
     }
+    
+    public function updatedDatafunc($id,request $request){
+        $task=todoModel::find($id);
+        $task->update($request -> all());
+        return redirect(to:'/home');
+
+    }
 }

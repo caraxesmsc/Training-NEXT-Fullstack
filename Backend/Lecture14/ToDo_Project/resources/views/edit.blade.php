@@ -8,7 +8,7 @@
                 <div class="card-header">Edit task</div>
 
                 <div class="card-body">
-                    <form action="/add" method="post">
+                    <form action="{{url('/updatedData/'.$toEdit->id)}}" method="post">
                         @csrf
                         <p>Task Name</p>
                         <div class="input-group flex-nowrap">
@@ -25,7 +25,7 @@
                             <input type="text" class="form-control" value="{{$toEdit->deadline}}" name="deadline" placeholder="due" aria-label="Username" aria-describedby="addon-wrapping">
                         </div>
                         <br>
-                        <button type="updatedData" class="btn btn-success">Save Changes</button>
+                        <button type="submit" class="btn btn-success">Save Changes</button>
                     </form>
 
                 </div>
