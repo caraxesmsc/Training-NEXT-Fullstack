@@ -1,6 +1,7 @@
 # Training-NEXT-Fullstack
 This is the folder where i save my hands on during my training for NEXT academy's Fullstack course
-### Each Lecture iis 4 hours and inlcudes Hands-on and Assignments.
+### Each Lecture is 4 hours and inlcudes Hands-on and Assignments.
+Total Bootcamp was 60 hours.
 
 # Backend
 Lecture #     | Content
